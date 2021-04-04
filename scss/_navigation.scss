@@ -1,0 +1,69 @@
+.navigation {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        display: inline-block;
+        width: 308px;
+        height: 47px;
+        font-size: 0;
+        background: no-repeat center/contain url('../assets/images/growtree-logo.svg');
+    }
+
+    &__menu {
+        display: flex;
+        margin-left: auto;
+        margin-right: 94px;
+        font-size: 16px;
+        font-weight: 700;
+        color: $grey;
+        align-items: center;
+        text-transform: uppercase;
+
+        .menu__item {
+            margin-right: 66px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .menu__link {
+            display: inline-block;
+            padding: 8px 27px;
+            position: relative;
+            transition: color 0.3s ease;
+
+            &::before, &::after {
+                content: '';
+                display: inline-block;
+                width: 17px;
+                height: 3px;
+                background-color: $green;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-1px) scaleX(0);
+                border-radius: 1000px;
+                transition: transform 0.2s ease;
+            }
+
+            &::before {
+                left: 0;
+                transform-origin: right;
+            }
+
+            &::after {
+                right: 0;
+                transform-origin: left;
+            }
+
+            &:hover {
+                color: $white;
+
+                &::before, &::after {
+                    transform: translateY(-1px) scaleX(1);
+                }
+            }
+        }
+    }
+}

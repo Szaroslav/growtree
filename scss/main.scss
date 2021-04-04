@@ -1,14 +1,29 @@
+/* ======= Global styles ======= */
+@import './variables';
+@import './components';
+
+/* ======= Sections styles ======= */
 @import './navigation';
 @import './header';
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font: 400 1rem 'Montserrat', sans-serif;
+    font: 400 1rem $main-font;
 }
 
 a {
     color: inherit;
     text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 ul {
