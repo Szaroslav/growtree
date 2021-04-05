@@ -1,5 +1,6 @@
 /* ======= Global styles ======= */
 @import './variables';
+@import './responsive';
 @import './components';
 
 /* ======= Sections styles ======= */
@@ -13,6 +14,7 @@
 body {
     margin: 0;
     font: 400 1rem $main-font;
+    position: relative;
 }
 
 a {

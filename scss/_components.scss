@@ -8,6 +8,7 @@
     border-radius: 1000px;
     border-top-right-radius: 0;
     box-shadow: 0 20px 40px rgba($black, 0.4);
+    white-space: nowrap;
     text-transform: uppercase;
 
     &--border {
@@ -18,8 +19,8 @@
 
         &::before {
             content: '';
-            width: 200px;
-            height: 200px;
+            width: 210px;
+            height: 210px;
             background-color: $green;
             border-radius: 50%;
             position: absolute;

@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="./css/main.css">
-    <title>Growtree</title>
-</head>
-<body>
-    <header class="header">
-        <div class="header__bg-tint"></div>
-        <nav class="navigation"> 
-            <a href="/" class="navigation__logo">Growtree</a>
-            <!-- <img src="./assets/images/logo.svg" alt="Growtree" class="navigation__logo"> -->
-            <ul class="navigation__menu">
-                <li class="menu__item">
-                    <a href="#" class="menu__link">Main</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">Info</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">Contact</a>
-                </li>
-            </ul>
-            <button class="button button--border button--sm">Plant now</button>
-        </nav>
-    </header>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+        <link rel="stylesheet" href="./css/main.css">
+        <title>Growtree</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__bg-tint"></div>
+            <div class="container">
+                <nav class="navigation"> 
+                    <a href="/" class="navigation__logo">Growtree</a>
+                    <div class="navigation__menu-container">
+                        <button class="navigation__menu-bg"></button>
+                        <ul class="navigation__menu">
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Main</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Info</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Contact</a>
+                            </li>
+                            <li class="menu__item">
+                                <button class="button button--border button--sm">Plant now</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="navigation__menu-button">
+                        <span class="menu-button__line"></span>
+                        <span class="menu-button__line"></span>
+                        <span class="menu-button__line"></span>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <script src="./js/navigation.js"></script>
+    </body>
 </html>

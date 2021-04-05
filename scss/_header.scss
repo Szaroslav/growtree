@@ -1,10 +1,9 @@
 .header {
     width: 100vw;
     min-height: 100vh;
-    padding: 90px 115px;
+    padding: 90px 0px;
     color: white;
     background: no-repeat center/cover url('../assets/images/header-bg.jpg');
-    position: relative;
 
     & > * {
         position: relative;
