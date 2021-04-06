@@ -4,13 +4,24 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./assets/icons/favicon.ico">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap">
+        <link rel="stylesheet" href="./swiper/swiper-bundle.css">
         <link rel="stylesheet" href="./css/main.css">
+        <script src="./swiper/swiper-bundle.min.js"></script>
         <title>Growtree</title>
     </head>
     <body>
-        <header class="header">
+        <header class="header swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>     
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            
             <div class="header__bg-tint"></div>
             <div class="header__container container">
                 <nav class="navigation"> 
@@ -81,9 +92,20 @@
                         </a></li>
                     </ul>
                 </div>
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qynfHBJ168w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </header>
+        <!-- <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>     
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div> -->
 
         <script src="./js/navigation.js"></script>
+        <script src="./js/header.js"></script>
     </body>
 </html>
