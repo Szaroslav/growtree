@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: rgba($green, 0.6);
+}
+
 body {
     margin: 0;
     font: 400 1rem $main-font;

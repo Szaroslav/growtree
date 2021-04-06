@@ -5,14 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap">
         <link rel="stylesheet" href="./css/main.css">
         <title>Growtree</title>
     </head>
     <body>
         <header class="header">
             <div class="header__bg-tint"></div>
-            <div class="container">
+            <div class="header__container container">
                 <nav class="navigation"> 
                     <a href="/" class="navigation__logo">Growtree</a>
                     <div class="navigation__menu-container">
@@ -38,6 +38,49 @@
                         <span class="menu-button__line"></span>
                     </button>
                 </nav>
+
+                <div class="header__content">
+                    <h1 class="header__caption">
+                        <picture class="header__picture">
+                            <source srcset="./assets/images/tree.png" media="(min-width: 1280px)">
+                            <source srcset="./assets/images/tree@2x.png" media="(min-width: 2540px)">
+                            <img src="./assets/images/tree.png" alt="Growtree">
+                        </picture>
+                        <span class="caption__letter">G</span>
+                        <span class="caption__letter">R</span>
+                        <span class="caption__letter">O</span>
+                        <span class="caption__letter">W</span>
+                    </h1>
+                    <p class="header__text">
+                        As an environmental charity, we’re on a mission to make it simple for everyone to help the environment by planting each one tree!
+                    </p>
+                    <button class="button">Plant a tree now</button>
+                </div>
+                <div class="header__social-media">
+                    <ul class="social-media">
+                        <li><a href="https://www.facebook.com/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36.53" height="36.537" viewBox="0 0 36.53 36.537">
+                                <g id="Facebook" class="cls-1" transform="translate(0 0)">
+                                    <path id="Subtraction_1" data-name="Subtraction 1" class="cls-2" d="M18.266,36.537c-4.927,0-5.576-.02-7.53-.107A13.489,13.489,0,0,1,6.3,35.582a9.042,9.042,0,0,1-3.234-2.106,8.956,8.956,0,0,1-2.112-3.24A13.4,13.4,0,0,1,.107,25.8C.02,23.828,0,23.175,0,18.273c0-4.938.022-5.587.114-7.537A13.5,13.5,0,0,1,.963,6.3,9.058,9.058,0,0,1,3.069,3.069,8.873,8.873,0,0,1,6.31.957a13.389,13.389,0,0,1,4.433-.85C12.717.02,13.37,0,18.272,0c4.938,0,5.587.022,7.538.114a13.465,13.465,0,0,1,4.432.85,9.033,9.033,0,0,1,3.234,2.105A8.889,8.889,0,0,1,35.588,6.31a13.4,13.4,0,0,1,.85,4.432c.085,1.935.093,2.568.093,7.53,0,4.9-.02,5.555-.107,7.53a13.474,13.474,0,0,1-.85,4.433,9.36,9.36,0,0,1-5.346,5.346,13.415,13.415,0,0,1-4.433.849C23.841,36.517,23.192,36.537,18.266,36.537ZM12,14.989v4.4h3.592V30.447H20V19.386h3.448l.547-4.4h-4V11.961c0-1.285.361-2.14,2.114-2.14h2.258V5.888a29.432,29.432,0,0,0-3.289-.174c-3.384,0-5.486,2.227-5.486,5.811v3.463Z" transform="translate(0 0)"/>
+                                </g>
+                            </svg>
+                        </a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36.53" height="36.537" viewBox="0 0 36.53 36.537">
+                                <g id="Instagram" transform="translate(0 0)">
+                                    <path id="Subtraction_3" data-name="Subtraction 3" class="cls-1" d="M18.266,36.537c-4.921,0-5.571-.02-7.53-.107A13.491,13.491,0,0,1,6.3,35.582a9.042,9.042,0,0,1-3.234-2.106,8.955,8.955,0,0,1-2.112-3.24A13.4,13.4,0,0,1,.107,25.8C.02,23.822,0,23.168,0,18.273c0-4.943.022-5.591.114-7.537A13.479,13.479,0,0,1,.964,6.3,9.048,9.048,0,0,1,3.069,3.069,8.876,8.876,0,0,1,6.31.957a13.4,13.4,0,0,1,4.433-.85C12.723.02,13.376,0,18.273,0c4.943,0,5.59.022,7.537.114a13.485,13.485,0,0,1,4.432.85,9.032,9.032,0,0,1,3.234,2.105A8.891,8.891,0,0,1,35.588,6.31a13.4,13.4,0,0,1,.85,4.432c.085,1.942.093,2.575.093,7.53,0,4.9-.02,5.549-.107,7.53a13.491,13.491,0,0,1-.849,4.433,9.362,9.362,0,0,1-5.347,5.346,13.4,13.4,0,0,1-4.432.849C23.835,36.517,23.185,36.537,18.266,36.537Zm.006-27.651a9.386,9.386,0,1,0,9.386,9.386A9.4,9.4,0,0,0,18.272,8.887ZM28.03,6.324a2.191,2.191,0,1,0,2.192,2.192A2.194,2.194,0,0,0,28.03,6.324ZM18.272,24.361a6.089,6.089,0,1,1,6.088-6.089A6.095,6.095,0,0,1,18.272,24.361Z" transform="translate(0 0)"/>
+                                </g>
+                            </svg>  
+                        </a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36.538" height="36.537" viewBox="0 0 36.538 36.537">
+                                <g id="Youtube" class="cls-1" transform="translate(0 0)">
+                                    <path id="Subtraction_4" data-name="Subtraction 4" class="cls-2" d="M18.285,36.537a66.3,66.3,0,0,1-12.05-1.025C3.4,34.966,1.167,32.08.68,28.329a74.738,74.738,0,0,1,0-20.123C1.167,4.456,3.4,1.569,6.235,1.023A66.188,66.188,0,0,1,18.27,0,66.144,66.144,0,0,1,30.3,1.023c2.836.546,5.069,3.431,5.556,7.181a74.76,74.76,0,0,1,0,20.127c-.49,3.751-2.722,6.637-5.554,7.183A65.91,65.91,0,0,1,18.285,36.537ZM13.485,9.87A1.487,1.487,0,0,0,12,11.354V25.182a1.483,1.483,0,0,0,2.24,1.274l11.595-6.9a1.484,1.484,0,0,0,0-2.546l-11.6-6.925A1.468,1.468,0,0,0,13.485,9.87Zm1.476,12.706V13.964l7.221,4.312-7.219,4.3Z" transform="translate(0 0)"/>
+                                </g>
+                            </svg>
+                        </a></li>
+                    </ul>
+                </div>
             </div>
         </header>
 

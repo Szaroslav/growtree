@@ -1,3 +1,15 @@
+html {
+    font-size: 16px;
+
+    @media only screen and (max-width: 1024px) {
+        font-size: 14px;
+    }
+
+    @media only screen and (max-width: 480px) {
+        font-size: 10px;
+    }
+}
+
 .container {
     width: 88%;
     max-width: 1690px;
@@ -11,5 +23,9 @@
     @media only screen and (max-width: 480px) {
         width: 100%;
         padding: 0 30px;
+    }
+
+    @media only screen and (max-width: 360px) {
+        padding: 0 10px;
     }
 }

@@ -1,13 +1,25 @@
 .header {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     padding: 90px 0px;
     color: white;
     background: no-repeat center/cover url('../assets/images/header-bg.jpg');
 
-    & > * {
-        position: relative;
-        z-index: 2;
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        & > * {
+            position: relative;
+
+            &:not(.header__content) {
+                z-index: 2;
+            }
+        }
+
+        & > .navigation {
+            z-index: 3;
+        }
     }
 
     &__bg-tint {
@@ -18,5 +30,167 @@
         left: 0;
         top: 0;
         z-index: 1;
+    }
+
+    &__picture {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 2;
+        transform: translate(-53%, -35%);
+
+        img {
+            width: 600px;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        padding: 100px 110px 36px 110px;
+        z-index: 1;
+        text-align: center;
+
+        & > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header__caption {
+            font-size: 0;
+            font-weight: 900;
+            z-index: 1;
+            line-height: 1.05;
+
+            .caption__letter {
+                display: inline-block;
+                font-size: 320px;
+                position: relative;
+                animation: 5s infinite floating;
+                text-shadow: 50px 0 99px rgba($black, 0.4);
+
+                &:nth-of-type(2) {
+                    margin-left: -0.19em;
+                }
+
+                &:nth-of-type(3) {
+                    margin-left: -0.125em;
+                }
+
+                &:nth-of-type(4) {
+                    margin-left: -0.2em;
+                }
+
+                @for $i from 1 through 4 {
+                    &:nth-of-type(#{$i}) {
+                        z-index: 4 - $i; 
+                        animation-delay: $i * 0.5s;
+
+                        @if $i % 2 == 1 {
+                            transform: translateY(-2%);
+                            animation-direction: alternate;
+                        } @else {
+                            transform: translateY(2%);
+                            animation-direction: alternate-reverse;
+                        }
+                    }
+                }
+
+                @keyframes floating {
+                    from {
+                        transform: translateY(-2%);
+                    }
+
+                    to {
+                        transform: translateY(2%);
+                    }
+                }
+            }
+        }
+
+        .header__text {
+            margin-top: 10px;
+            margin-bottom: 40px;
+            font-size: 1.625rem;
+            font-weight: 600;
+            text-shadow: 4px 0 10px rgba($black, 0.2);
+            letter-spacing: -1px;
+            word-spacing: 0.05em;
+        }
+    }
+
+    &__social-media {
+        margin-top: 186px;
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+
+        li {
+            margin-right: 28px;
+            font-size: 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        a {
+            font-size: 0;
+        }
+
+        svg {
+            fill: rgba($grey, 0.8);
+            transition: fill 0.25s ease;
+
+            &:hover {
+                fill: $white;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1365px) {
+        .header__caption .caption__letter {
+            font-size: 250px;
+        }
+    }
+
+    @media only screen and (max-width: 1199px) {
+        &__content {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    @media only screen and (max-width: 1023px) {
+        padding: 60px 0;
+
+        .header__caption .caption__letter {
+            font-size: 200px;
+        }
+    }
+
+    @media only screen and (max-width: 799px) {
+        .header__caption .caption__letter {
+            font-size: 126px;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        padding: 40px 0;
+
+        &__picture {
+            display: none;
+        }
+
+        .header__caption .caption__letter {
+            font-size: 96px;
+        }
+    }
+
+    @media only screen and (max-width: 330px) {
+        .header__caption .caption__letter {
+            font-size: 90px;
+        }
     }
 }
