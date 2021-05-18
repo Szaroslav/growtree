@@ -81,6 +81,10 @@
                 }
             }
         }
+
+        .menu__button-item {   
+            display: none;
+        }
     }
 
     &__menu-button {
@@ -92,6 +96,7 @@
         background-color: transparent;
         position: relative;
         z-index: 1;
+        transition: all 0.25s ease;
 
         .menu-button__line {
             display: inline-block;
@@ -118,21 +123,21 @@
             background-color: $white;
         }
 
-        &.clicked .menu-button__line {
-            &:nth-child(1) {
-                transform: rotateZ(21deg) scaleX(1.05);
-            }
+        // &.clicked .menu-button__line {
+        //     &:nth-child(1) {
+        //         transform: rotateZ(21deg) scaleX(1.05);
+        //     }
 
-            &:nth-child(2) {
-                visibility: hidden;
-                opacity: 0;
-                transform: scaleX(0);
-            }
+        //     &:nth-child(2) {
+        //         visibility: hidden;
+        //         opacity: 0;
+        //         transform: scaleX(0);
+        //     }
 
-            &:nth-child(3) {
-                transform: rotateZ(-21deg) scaleX(1.05);
-            }
-        }
+        //     &:nth-child(3) {
+        //         transform: rotateZ(-21deg) scaleX(1.05);
+        //     }
+        // }
     }
 
     @media only screen and (max-width: 1366px) {
@@ -219,6 +224,39 @@
                     margin-top: 90px;
                 }
             }
+
+            .menu__button-item {
+                display: inline-block;  
+                position: absolute;
+                top: 32px;
+                right: 32px;
+
+                .navigation__menu-close-button {
+                    height: 32px;
+                    background-color: transparent;
+                    border: none;
+
+                    .menu-button__line {
+                        display: block;
+                        width: 32px;
+                        height: 2px;
+                        margin-bottom: -2px;
+                        background-color: $grey;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        &:nth-child(1) {
+                            transform: rotateZ(40deg);
+                        }
+    
+                        &:nth-child(2) {
+                            transform: rotateZ(-40deg);
+                        }
+                    }
+                }
+            }
         }
 
         &.open &__menu-container {
@@ -233,6 +271,11 @@
         &__menu-button {
             display: inline-flex;
         }
+
+        &.open > &__menu-button {
+            opacity: 0;
+            visibility: hidden;
+        }
     }
 
     @media only screen and (max-width: 480px) {
@@ -243,6 +286,11 @@
 
         &__menu {
             width: 100vw;
+
+            .menu__button-item {
+                top: 20px;
+                right: 20px;
+            }
         }
 
         &__menu-button {

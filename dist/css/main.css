@@ -190,6 +190,10 @@ html {
   transform: translateY(-1px) scaleX(1);
 }
 
+.navigation__menu .menu__button-item {
+  display: none;
+}
+
 .navigation__menu-button {
   display: none;
   flex-direction: column;
@@ -199,6 +203,7 @@ html {
   background-color: transparent;
   position: relative;
   z-index: 1;
+  transition: all 0.25s ease;
 }
 
 .navigation__menu-button .menu-button__line {
@@ -224,20 +229,6 @@ html {
 
 .navigation__menu-button:hover .menu-button__line {
   background-color: #fff;
-}
-
-.navigation__menu-button.clicked .menu-button__line:nth-child(1) {
-  transform: rotateZ(21deg) scaleX(1.05);
-}
-
-.navigation__menu-button.clicked .menu-button__line:nth-child(2) {
-  visibility: hidden;
-  opacity: 0;
-  transform: scaleX(0);
-}
-
-.navigation__menu-button.clicked .menu-button__line:nth-child(3) {
-  transform: rotateZ(-21deg) scaleX(1.05);
 }
 
 @media only screen and (max-width: 1366px) {
@@ -314,6 +305,33 @@ html {
     margin-bottom: 0;
     margin-top: 90px;
   }
+  .navigation__menu .menu__button-item {
+    display: inline-block;
+    position: absolute;
+    top: 32px;
+    right: 32px;
+  }
+  .navigation__menu .menu__button-item .navigation__menu-close-button {
+    height: 32px;
+    background-color: transparent;
+    border: none;
+  }
+  .navigation__menu .menu__button-item .navigation__menu-close-button .menu-button__line {
+    display: block;
+    width: 32px;
+    height: 2px;
+    margin-bottom: -2px;
+    background-color: #aeb4a6;
+  }
+  .navigation__menu .menu__button-item .navigation__menu-close-button .menu-button__line:last-child {
+    margin-bottom: 0;
+  }
+  .navigation__menu .menu__button-item .navigation__menu-close-button .menu-button__line:nth-child(1) {
+    transform: rotateZ(40deg);
+  }
+  .navigation__menu .menu__button-item .navigation__menu-close-button .menu-button__line:nth-child(2) {
+    transform: rotateZ(-40deg);
+  }
   .navigation.open .navigation__menu-container {
     visibility: visible;
     opacity: 1;
@@ -324,6 +342,10 @@ html {
   .navigation__menu-button {
     display: inline-flex;
   }
+  .navigation.open > .navigation__menu-button {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -333,6 +355,10 @@ html {
   }
   .navigation__menu {
     width: 100vw;
+  }
+  .navigation__menu .menu__button-item {
+    top: 20px;
+    right: 20px;
   }
   .navigation__menu-button {
     padding: 12px;
@@ -657,6 +683,10 @@ body {
   margin: 0;
   font: 400 1rem "Montserrat", sans-serif;
   position: relative;
+}
+
+a, button, input, textarea, select {
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
